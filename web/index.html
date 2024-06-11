@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    If serving from a non-root path, change the base href to match the base path.
+    The path should start and end with a slash.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Your App">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <!-- Page title and manifest -->
+  <title>Your App</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Firebase SDK and initialization -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js";
+
+    // Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDDsOnFwX0G3JFoZvQHqEpTSG9fxkzv4xE",
+      authDomain: "market-f41cc.firebaseapp.com",
+      databaseURL: "https://market-f41cc-default-rtdb.firebaseio.com",
+      projectId: "market-f41cc",
+      storageBucket: "market-f41cc.appspot.com",
+      messagingSenderId: "1026171264804",
+      appId: "1:1026171264804:web:707a8fa11190cb09215db1",
+      measurementId: "G-3JHG9RHQ45"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+
+  <!-- Flutter initialization and configuration -->
+  <script type="text/javascript">
+    window.flutterWebRenderer = "html"; // Specify HTML renderer for Flutter
+  </script>
+
+  <!-- Placeholder for service worker version -->
+  <script>
+    const serviceWorkerVersion = null;
+  </script>
+
+  <!-- Flutter initialization script -->
+  <script src="flutter.js" defer></script>
+</head>
+<body>
+<!-- Flutter app initialization -->
+<script>
+  window.addEventListener('load', function(ev) {
+    _flutter.loader.loadEntrypoint({
+      serviceWorker: {
+        serviceWorkerVersion: serviceWorkerVersion,
+      },
+      onEntrypointLoaded: async function(engineInitializer) {
+        const appRunner = await engineInitializer.initializeEngine();
+        await appRunner.runApp();
+      },
+    });
+  });
+</script>
+</body>
+</html>
